@@ -66,7 +66,10 @@ export const Education: React.FC = () => {
               B.E. Computer Science & Engineering
             </h3>
             <p className="font-body text-[14px] text-ink/70">
-              SACS M.A.V.M.M Engineering College, Madurai · 2022–2026
+              SACS M.A.V.M.M Engineering College, Madurai.
+            </p>
+            <p className="font-body text-[14px] text-ink/70">
+              2022–2026
             </p>
             <p className="font-body text-[14px] text-ink/70">
               CGPA: 8.2 / 10
