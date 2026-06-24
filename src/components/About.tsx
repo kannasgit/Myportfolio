@@ -20,7 +20,7 @@ export const About: React.FC = () => {
 
         {/* Right Column: heading and bio paragraph */}
         <div className="flex flex-col gap-4">
-          <h2 className="font-display font-medium text-[26px] text-deep tracking-tight">
+          <h2 className="font-display font-medium text-[26px] text-white tracking-tight">
             About
           </h2>
           <p className="font-body text-[15px] leading-loose text-white/85 max-w-[480px]">
