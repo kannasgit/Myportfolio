@@ -1,0 +1,126 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer utilities {
+  /* These must include the element's own background as a second layer,
+     because background-image is a single property — applying a separate
+     bg-gradient-to-br / bg-paper utility class alongside these does NOT
+     layer automatically, it just overwrites whichever rule loads last.
+     Pass the actual surface color/gradient in as a CSS variable per-element
+     instead of relying on a second Tailwind background utility class. */
+  .bg-grid-paper {
+    background-image:
+      radial-gradient(rgba(13, 39, 61, 0.09) 1px, transparent 1px),
+      var(--surface, #CDD7DF);
+    background-size: 16px 16px, auto;
+  }
+
+  .bg-grid-dark {
+    background-image:
+      radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      var(--surface, linear-gradient(to bottom right, #488084, #CCDEE4));
+    background-size: 16px 16px, auto;
+  }
+
+  .clip-about {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), 0 100%);
+  }
+  @media (min-width: 640px) {
+    .clip-about {
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 36px), 0 100%);
+    }
+  }
+
+  .clip-projects {
+    clip-path: polygon(0 16px, 100% 0, 100% 100%, 0 100%);
+  }
+  @media (min-width: 640px) {
+    .clip-projects {
+      clip-path: polygon(0 36px, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+  .clip-footer {
+    clip-path: polygon(0 0, 100% 16px, 100% 100%, 0 100%);
+  }
+  @media (min-width: 640px) {
+    .clip-footer {
+      clip-path: polygon(0 0, 100% 36px, 100% 100%, 0 100%);
+    }
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-33.33%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation-play-state: paused;
+  }
+}
+
+/* Scroll-reveal animation states.
+   IMPORTANT: these must stay OUTSIDE @layer utilities. Tailwind re-orders
+   rules inside @layer utilities by its own internal sort, not source order,
+   so "visible" was sometimes being emitted before "hidden" in the compiled
+   CSS and silently losing the cascade. Plain CSS below preserves normal
+   browser cascade order, so .reveal-visible (added second, in the DOM)
+   always wins over .reveal-hidden regardless of Tailwind's build output. */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-hidden.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-child {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal-child.reveal-child-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-hidden,
+  .reveal-child {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid #8AA7BC;
+  outline-offset: 2px;
+}
+
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #CDD7DF;
+  color: #0D273D;
+}
