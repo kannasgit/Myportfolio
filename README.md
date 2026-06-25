@@ -1,32 +1,46 @@
-# React + TypeScript + Vite
+# My Professional Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern and responsive developer portfolio built to showcase my professional experience, technical skills, and projects.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Visit the portfolio: https://kannasportfolio.vercel.app/
 
-## React Compiler
+## 👨‍💻 About Me
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+I'm Kannan, a Software Engineer with ~1 years of experience building scalable, high-performance web applications using modern frontend technologies.
 
-## Expanding the Oxlint configuration
+I enjoy creating clean, responsive, and user-friendly digital experiences while focusing on performance, maintainability, and scalability.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## ✨ Features
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+* Responsive design for desktop and mobile devices
+* Interactive and modern UI
+* Professional experience timeline
+* Skills showcase
+* Resume download
+* Contact section
+* Optimized performance and accessibility
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 🛠️ Tech Stack Used
+
+### Frontend
+
+* React.js
+* Next.js
+* TypeScript
+* Tailwind CSS
+
+### Tools
+
+* Git
+* GitHub
+* Figma
+
+## 📬 Contact
+
+Feel free to reach out for collaborations or opportunities.
+
+* Email: [mskannan1612@gmail.com](https://mailto:mskannan1612@gmail.com)
+* Portfolio: https://kannasportfolio.vercel.app/
+* LinkedIn: [linkedin.com/kannand7](https://linkedin.com/kannand7)
