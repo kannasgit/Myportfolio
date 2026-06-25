@@ -62,7 +62,7 @@ export const Education: React.FC = () => {
             />
           )}
           <div className="p-5 flex flex-col gap-1 items-start relative z-10">
-            <h3 className="font-display text-[18px] font-semibold text-[#022F5B] leading-snug">
+            <h3 className="font-display text-[16px] font-semibold text-[#022F5B] leading-snug">
               B.E. Computer Science & Engineering
             </h3>
             <p className="font-body text-[14px] text-ink/70">
