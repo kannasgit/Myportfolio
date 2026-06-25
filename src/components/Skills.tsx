@@ -67,7 +67,7 @@ export const Skills: React.FC = () => {
               <span className="font-mono text-[11px] uppercase text-bright tracking-wider relative z-10 text-center">
                 {skill.label}
               </span>
-              <span className="font-display text-[18px] text-ink font-medium leading-snug relative z-10 text-center">
+              <span className="font-display text-[16px] text-ink font-medium leading-snug relative z-10 text-center">
                 {skill.value}
               </span>
             </div>
