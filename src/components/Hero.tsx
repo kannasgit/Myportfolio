@@ -57,7 +57,7 @@ export const Hero: React.FC = () => {
         </p>
 
         {/* Thin Gradient Bar */}
-        <div className="w-[90px] h-[3px] bg-gradient-to-r from-bright to-transparent mt-4" />
+        <div className="w-[90px] h-[3px] bg-gradient-to-r from-deep to-bright2" />
       </div>
     </section>
   );
