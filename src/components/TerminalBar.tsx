@@ -1,4 +1,4 @@
-huimport React from 'react';
+import React from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export const TerminalBar: React.FC = () => {
@@ -10,7 +10,7 @@ export const TerminalBar: React.FC = () => {
       className={`relative w-full h-[50px] bg-ink bg-grid-dark flex flex-col sm:flex-row sm:justify-betweem gap-2 items-center px-6 text-white overflow-hidden select-none reveal-hidden ${isIntersecting ? 'reveal-visible' : ''}`}
     >
       {/* Left: status + blinking cursor */}
-      <div className="inline-flex whitespace-nowrap font-mono text-[12px]">
+      <div className="inline-flex items-center whitespace-nowrap font-mono text-[12px]">
         <span>&gt; status: open to internships / Jobs</span>
         <span className="ml-1 w-[6px] h-[1em] bg-white animate-cursor-blink" />
       </div>
